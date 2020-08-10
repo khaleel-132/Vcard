@@ -1,0 +1,118 @@
+body{
+	background-color: lightblue;
+}
+
+.header {
+    margin-left: 80px;
+    position: relative;
+    top: 60px;
+    float: left;
+    width: 6vw;
+    z-index: 100;
+    text-align: center;
+    opacity: 1;
+    visibility: visible;
+    border-radius: 5px;
+    background-color: white;
+}
+
+ul{
+	padding: 2px;
+}
+
+li{
+	list-style: none;
+	padding: 20px;
+}
+
+.leftcol{
+	margin-left: 15px;
+    position: relative;
+    top: 50px;
+    float: left;
+    width: 35vw;
+    height: 80vh;
+    z-index: 100;
+    text-align: center;
+    opacity: 1;
+    visibility: visible;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.rightcol{
+	margin-left: 0px;
+    position: relative;
+    top: 85px;
+    float: left;
+    width: 40vw;
+    height: 70vh;
+    text-align: center;
+    opacity: 1;
+    visibility: visible;
+    background-color: white;
+}
+
+@media (max-width: 680px)
+{
+	.header{
+		margin-left: 100px;
+	    position: relative;
+	    top: 50px;
+	    float: left;
+	    width: 10vw;
+	    z-index: 100;
+	    text-align: center;
+	    opacity: 1;
+	    visibility: visible;
+	    border-radius: 5px;
+	    background-color: white;
+	}
+}
+	
+@media (max-width: 1120px)
+{
+	.header {
+		margin-left: 100px;
+	    position: relative;
+	    top: 50px;
+	    float: left;
+	    width: 10vw;
+	    z-index: 100;
+	    text-align: center;
+	    opacity: 1;
+	    visibility: visible;
+	    border-radius: 5px;
+	    background-color: white;
+		    
+	}
+	.leftcol{
+		margin-left: 15px;
+	    position: relative;
+	    top: 50px;
+	    float: left;
+	    width: 35vw;
+	    height: 80vh;
+	    z-index: 100;
+	    text-align: center;
+	    opacity: 1;
+	    visibility: visible;
+	    border-radius: 5px;
+	    background-color: white;
+	    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	}
+
+	.rightcol{
+		margin-left: 0px;
+	    position: relative;
+	    top: 85px;
+	    float: left;
+	    width: 40vw;
+	    height: 70vh;
+	    text-align: center;
+	    opacity: 1;
+	    visibility: visible;
+	    background-color: white;
+	}
+}
