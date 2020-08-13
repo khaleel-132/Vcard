@@ -12,6 +12,16 @@
     <!------ Include the above in your HEAD tag ---------->
 </head>
 <body>
+<nav class="navbar navbar-expand-lg navbar-dark">
+<img class='navbar-band' src="images/todo.png" height='60px' width='120px' alt="">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+  </div>
+</nav>
+<div class="col-12">
     <div class="container login-container">
         <div class="row">
             <div class="col-md-6 login-form-1">
@@ -23,11 +33,8 @@
                     <div class="form-group">
                         <input type="password" class="form-control" placeholder="Your Password *" name='password' value="" />
                     </div>
-                    <div class="form-group">
+                    <div class="form-group" >
                         <input type="submit" class="btnSubmit" value="Sing Up" />
-                    </div>
-                    <div class="form-group">
-                        <a href="#" class="ForgetPwd">Forget Password?</a>
                     </div>
                 </form>
             </div>
@@ -43,14 +50,11 @@
                     <div class="form-group">
                         <input type="submit" class="btnSubmit" value="Login" />
                     </div>
-                    <div class="form-group">
-
-                        <a href="#" class="ForgetPwd" value="">Forget Password?</a>
-                    </div>
                 </form>
             </div>
         </div>
     </div>
+</div>
 </body>
 
 </html>
