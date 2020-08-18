@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="css/index.css">
     <!------ Include the above in your HEAD tag ---------->
 </head>
-<body>
+<body'>
 <nav class="navbar navbar-expand-lg navbar-dark">
 <img class='navbar-band' src="images/todo.png" height='60px' width='120px' alt="">
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -21,6 +21,7 @@
 
   </div>
 </nav>
+<img src="images/bg.jpg" class="img-fluid" alt="Responsive image">
 <div class="col-12">
     <div class="container login-container">
         <div class="row">
