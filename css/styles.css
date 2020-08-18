@@ -14,25 +14,25 @@ body {
 	background-color: #120FA6;
 	height: 100%;
 	background-position: center;
-  	background-repeat: no-repeat;
-  	background-size: cover;
+  background-repeat: no-repeat;
+  background-size: cover;
 	overflow: hidden;
 	z-index: 0;
 }
 
 nav {
 	top: 10vh;
-  	text-align: center;
-  	float: left;
-  	background: rgba(255, 255, 255);
-  	position: fixed;
-  	z-index: 100;
-  	font-size: 13px;
-  	width: 6vw;
-  	font-weight: 300;
+  text-align: center;
+  float: left;
+  background: rgba(255, 255, 255);
+  position: fixed;
+  z-index: 100;
+  font-size: 13px;
+  width: 6vw;
+  font-weight: 300;
 	margin-left: 80px;
-    visibility: visible;
-    border-radius: 5px;
+  visibility: visible;
+  border-radius: 5px;
 }
 	
 nav ul {
@@ -51,8 +51,8 @@ nav em {
 
 nav a {
 	text-decoration: none!important;
-  	position: relative;
-  	z-index: 0;
+  position: relative;
+  z-index: 0;
 }
 
 nav a, nav a:visited, nav a:active {
@@ -121,7 +121,7 @@ nav a.active {
 }
 
 .leftcol{
-	margin-left: 180px;
+    margin-left: 180px;
     position: fixed;
     top: 50px;
     width: 30vw;
@@ -133,3 +133,101 @@ nav a.active {
     background-color: white;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+
+
+
+@media (max-width: 1000px) {
+
+nav {
+      top: 0.01vh;
+      height: 50px;
+      background-color: rgba(255,255,255);
+      width: 100%;
+      font-weight: 300;
+      font-size: 1rem;
+      margin-left: 0px;
+      border-radius: 0px;
+      text-align: center;
+  }  
+
+  nav li {
+  list-style: none;
+  padding: 5px 55px 5px 55px;
+  color: #000;
+  display: inline-block;
+  }
+
+  nav em {
+    font-style: normal;
+  }
+
+  nav a {
+    text-decoration: none!important;
+    
+    z-index: 0;
+  }
+
+
+.leftcol{
+  margin-left: 0px;
+  width: 100%;
+  height: 90vh;
+  border-radius: 0px;
+  top: 49px;
+}
+
+.slides .slide .content {
+ display: none;
+}
+
+
+}
+
+
+@media (max-width: 749px) {
+
+.leftcol{
+  margin-left: 0px;
+  width: 100%;
+  height: 90vh;
+  border-radius: 0px;
+}
+.slides .slide .content {
+ display: none;
+}
+nav li {
+  list-style: none;
+  padding: 5px 55px 5px 55px;
+  color: #000;
+  display: inline-block;
+  }
+
+}
+@media (max-width: 450px) {
+  
+.slides .slide {
+  height: 100vh;
+  width: 100vw;
+  float: left;
+  text-align: center;
+  background-size: cover;
+}
+
+.leftcol{
+  margin-left: 0px;
+  width:100%;
+  height: 90vh;
+  border-radius: 0px;
+}
+.slides .slide .content {
+ display: none;
+}
+nav li {
+  list-style: none;
+  padding: 5px 22px 5px 22px;
+  color: #000;
+  display: inline-block;
+  }
+  
+}
+
