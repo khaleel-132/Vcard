@@ -1,18 +1,58 @@
+<?php 
+  session_start(); 
+
+  if (!isset($_SESSION['username'])) {
+  	$_SESSION['msg'] = "You must log in first";
+  	header('location: register.php');
+  }
+  
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<title>Registration Details</title>
-	<!-- Mobile Specific Metas -->
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<!-- Font-->
+	<title> Registration Details</title>
 	<link rel="stylesheet" type="text/css" href="css/montserrat-font.css">
 	<link rel="stylesheet" type="text/css" href="css/fonts/material-design-iconic-font/css/material-design-iconic-font.min.css">
-	<!-- Main Style Css -->
-    <link rel="stylesheet" href="css/style.css"/>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/css.css">
 </head>
-<body class="form-v10">
-	<div class="page-content">
+<body>
+
+<div class="toast fade show" data-autohide="false" style="position: fixed; right: 0; width: 300px; margin-top: 1%; z-index: 200;">
+
+      <div class="toast-header">
+        <strong class="mr-auto text-primary">
+          <!-- notification message -->
+
+          <?php if (isset($_SESSION['success'])) : ?>
+            <div class="error success">
+              <h3  style="font-size: 1rem;">
+                <?php 
+                  echo $_SESSION['success']; 
+                  unset($_SESSION['success']);
+                ?>
+              </h3>
+            </div>
+          <?php endif ?>
+
+        </strong>
+        
+        <small class="text-muted">5 mins ago</small>
+        <button type="button" class="ml-2 mb-1 close" data-dismiss="toast">&times;</button>
+      </div>
+
+      <div class="toast-body">
+        <!-- logged in user information -->
+        <?php  if (isset($_SESSION['username'])) : ?>
+          <h6>Welcome <strong><?php echo $_SESSION['username']; ?></strong><br>
+            <a href="register.php?logout='1'" style="color: red;">Logout</a> </h6>
+        <?php endif ?>
+
+      </div>
+  </div>
+
+  <div class="page-content">
 		<div class="form-v10-content">
 			<form class="form-detail" action="#" method="post" id="myform">
 				<div class="form-left">
@@ -132,11 +172,23 @@
 						</label>
 					</div>
 					<div class="form-row-last">
-						<input type="submit" name="register" class="register" value="Register">
+						<a href="home.php"><input type="submit" name="register" class="register" value="Register"></a>
 					</div>
 				</div>
 			</form>
 		</div>
 	</div>
+	
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+
+
+
+  <script>
+      $(document).ready(function(){
+        $('.toast').toast('show');
+      });
+    </script>
 </body>
 </html>
