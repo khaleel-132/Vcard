@@ -1,5 +1,4 @@
 <?php
-session_start();
 
 // initializing variables
 $username = "";
@@ -8,7 +7,7 @@ $errors = array();
 $errors1 = array(); 
 
 // connect to the database
-$db = mysqli_connect('localhost:8889', 'root', 'root', 'registration');
+$db = mysqli_connect('localhost', 'root', 'root', 'registration');
 
 // REGISTER USER
 if (isset($_POST['reg_user'])) {

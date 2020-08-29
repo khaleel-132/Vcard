@@ -1,9 +1,17 @@
 <?php 
+
+	require_once "server.php";
   session_start(); 
 
   if (!isset($_SESSION['username'])) {
   	$_SESSION['msg'] = "You must log in first";
   	header('location: register.php');
+  }
+
+  if (isset($_GET['logout'])) {
+  	session_destroy();
+  	unset($_SESSION['username']);
+  	header("location: register.php");
   }
   
 ?>
@@ -54,7 +62,7 @@
 
   <div class="page-content">
 		<div class="form-v10-content">
-			<form class="form-detail" action="#" method="post" id="myform">
+			<form class="form-detail" action="home.php" method="post" id="myform">
 				<div class="form-left">
 					<h2>General Infomation</h2>
 					
@@ -70,7 +78,7 @@
 						<input type="text" name="age" class="company" id="company" placeholder="Age" required>
 					</div>
 					<div class="form-row">
-						<input list="title" name="titles" id="titles" placeholder="Job">
+						<input list="title" name="job" id="titles" placeholder="Present Job">
 						<datalist id="title">
 						  <option value="Web Developer">
 						  <option value="Software Developer">
@@ -84,20 +92,23 @@
 					</div>
 					<div class="form-group">
 						<div class="form-row form-row-3">
-							<input type="text" name="business" class="business" id="Skills" placeholder="Services You Provide" required>
+							<input type="text" name="service1" class="business" id="Skills" placeholder="Services You Provide1" required>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="form-row form-row-3">
+							<input type="text" name="service2" class="business" id="Skills" placeholder="Services You Provide2" required>
 						</div>
 					</div>
 					<div class="form-row">
 						<textarea type="textbox" rows="03" cols="55" name="about" class="about" id="about" placeholder="Write about yourself..." required></textarea>
 					</div>
 
-
-
 					<div class="form-group">
 						<div class="form-row form-row-1">
 							
 								Upload your profile photo:
-								<input type="file" name="fileToUpload" id="fileToUpload">
+								<input type="file" name="photo" id="fileToUpload">
 								
 						</div>
 					</div>
@@ -105,7 +116,7 @@
 						<div class="form-row form-row-1">
 							
 								Resume:
-								<input type="file" name="fileToUpload" id="fileToUpload">
+								<input type="file" name="resume" id="fileToUpload">
 								
 						</div>
 					</div>
@@ -116,21 +127,21 @@
 				<div class="form-right">
 					<h2>Contact Details</h2>
 					<div class="form-row">
-						<input type="text" name="street" class="street" id="street" placeholder="Address" required>
+						<input type="text" name="address" class="street" id="street" placeholder="Address" required>
 					</div>
 					<div class="form-row">
-						<input type="text" name="additional" class="additional" id="additional" placeholder="Landmark" required>
+						<input type="text" name="land_mark" class="additional" id="additional" placeholder="Landmark" required>
 					</div>
 					<div class="form-group">
 						<div class="form-row form-row-1">
-							<input type="text" name="zip" class="zip" id="zip" placeholder="Zip Code" required>
+							<input type="text" name="zip_code" class="zip" id="zip" placeholder="Zip Code" required>
 						</div>
 						<div class="form-row form-row-2">
-							<select name="District">
-							    <option value="place">Alappuzha</option>
-							    <option value="Street">Ernakulam</option>
-							    <option value="District">Idukki</option>
-							    <option value="City">Kannur </option>
+							<select name="district">
+							    <option value="Alappuzha">Alappuzha</option>
+							    <option value="Ernakulam">Ernakulam</option>
+							    <option value="Idukki">Idukki</option>
+							    <option value="Kannur">Kannur </option>
 							</select>
 							<span class="select-btn">
 							  	<i class="zmdi zmdi-chevron-down"></i>
@@ -157,13 +168,19 @@
 						</div>
 					</div>
 					<div class="form-row">
-						<input type="text" name="your_email" id="your_email" class="input-text" required pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}" placeholder="Your Email">
+						<input type="text" name="email" id="your_email" class="input-text" required pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}" placeholder="Your Email">
 					</div>
 					<div class="form-row">
-						<input type="text" name="your_acc1" id="your_email" class="input-text"  placeholder="Social media account 1">
+						<input type="text" name="social_account_1" id="your_email" class="input-text"  placeholder="Github account">
 					</div>
 					<div class="form-row">
-						<input type="text" name="your_acc2" id="your_email" class="input-text"  placeholder="Social media account 2">
+						<input type="text" name="social_account_2" id="your_email" class="input-text"  placeholder="Instagram account">
+					</div>
+					<div class="form-row">
+						<input type="text" name="social_account_3" id="your_email" class="input-text"  placeholder="Linkedin account">
+					</div>
+					<div class="form-row">
+						<input type="text" name="social_account_4" id="your_email" class="input-text"  placeholder="Twitter account">
 					</div>
 					<div class="form-checkbox">
 						<label class="container"><p>I do accept the <a href="#" class="text">Terms and Conditions</a> of your site.</p>
@@ -172,12 +189,13 @@
 						</label>
 					</div>
 					<div class="form-row-last">
-						<a href="home.php"><input type="submit" name="register" class="register" value="Register"></a>
+						<input type="submit" name="register" class="register" value="Register">
 					</div>
 				</div>
 			</form>
 		</div>
 	</div>
+
 	
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>

@@ -30,11 +30,11 @@
                   <?php include('errors.php'); ?>
 
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Your Username *" name="username" value="<?php echo $username; ?>" />
+                        <input type="text" class="form-control" placeholder="Your Username *" name="username" value="" />
                     </div>
 
                     <div class="form-group">
-                        <input type="email" class="form-control" placeholder="Your Email *" name="email" value="<?php echo $email; ?>"  />
+                        <input type="email" class="form-control" placeholder="Your Email *" name="email" value=""  />
                     </div>
 
                     <div class="form-group">
