@@ -138,10 +138,10 @@ if ($result = mysqli_query($db , $query1)) {
       <small style="font-size: 18px; color: #1B13C1;"> <?php echo $job ; ?> </small></h2>
       <p>
         <?php echo '<a href="mailto:'.$email.'" class="fa fa-envelope p-1" style="font-size: 24px; text-decoration: none; color: #000;" target="_blank"></a>'; ?>
-        <?php echo '<a href="'.$social_account_1.'" class="fa fa-github p-1" style="font-size: 24px; text-decoration: none; color: #000;" target="_blank"></a>';?>
-        <?php echo '<a href="'.$social_account_2.'" class="fa fa-instagram p-1" style="font-size: 24px; text-decoration: none; color: #000;" target="_blank"></a>'; ?>
-        <?php echo '<a href="'.$social_account_4.'" class="fa fa-twitter p-1" style="font-size: 24px; text-decoration: none; color: #000;" target="_blank"></a>'; ?>
-        <?php echo '<a href="'.$social_account_3.'" class="fa fa-linkedin p-1" style="font-size: 24px; text-decoration: none; color: #000;" target="_blank"></a>'; ?>
+        <?php echo '<a href="https://github.com/'.$social_account_1.'" class="fa fa-github p-1" style="font-size: 24px; text-decoration: none; color: #000;" target="_blank"></a>';?>
+        <?php echo '<a href="https://www.instagram.com/'.$social_account_2.'" class="fa fa-instagram p-1" style="font-size: 24px; text-decoration: none; color: #000;" target="_blank"></a>'; ?>
+        <?php echo '<a href="https://twitter.com/'.$social_account_4.'" class="fa fa-twitter p-1" style="font-size: 24px; text-decoration: none; color: #000;" target="_blank"></a>'; ?>
+        <?php echo '<a href="https://www.linkedin.com/in/'.$social_account_3.'" class="fa fa-linkedin p-1" style="font-size: 24px; text-decoration: none; color: #000;" target="_blank"></a>'; ?>
       </p>
       <br>
       <hr>
