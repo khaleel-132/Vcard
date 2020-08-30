@@ -1,17 +1,20 @@
 <?php 
 
-	require_once "server.php";
-  session_start(); 
+ session_start();
+
+  $db = mysqli_connect('localhost', 'root', 'root', 'registration');
+
 
   if (!isset($_SESSION['username'])) {
   	$_SESSION['msg'] = "You must log in first";
-  	header('location: register.php');
+  	header("Location: register.php");
   }
 
   if (isset($_GET['logout'])) {
   	session_destroy();
   	unset($_SESSION['username']);
-  	header("location: register.php");
+  	header("Location: register.php");
+
   }
   
 ?>
@@ -20,8 +23,6 @@
 <html>
 <head>
 	<title> Registration Details</title>
-	<link rel="stylesheet" type="text/css" href="css/montserrat-font.css">
-	<link rel="stylesheet" type="text/css" href="css/fonts/material-design-iconic-font/css/material-design-iconic-font.min.css">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/css.css">
 </head>

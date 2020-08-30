@@ -3,13 +3,15 @@
 
   if (!isset($_SESSION['username'])) {
     $_SESSION['msg'] = "You must log in first";
-    header('location: register.php');
+    header("Location: register.php");
+    
   }
   
   if (isset($_GET['logout'])) {
     session_destroy();
     unset($_SESSION['username']);
-    header("location: register.php");
+    header("Location: register.php");
+
   }
 
 // connect to the database
@@ -138,8 +140,8 @@ if ($result = mysqli_query($db , $query1)) {
         <?php echo '<a href="mailto:'.$email.'" class="fa fa-envelope p-1" style="font-size: 24px; text-decoration: none; color: #000;" target="_blank"></a>'; ?>
         <?php echo '<a href="'.$social_account_1.'" class="fa fa-github p-1" style="font-size: 24px; text-decoration: none; color: #000;" target="_blank"></a>';?>
         <?php echo '<a href="'.$social_account_2.'" class="fa fa-instagram p-1" style="font-size: 24px; text-decoration: none; color: #000;" target="_blank"></a>'; ?>
-        <?php echo '<a href="'.$social_account_3.'" class="fa fa-twitter p-1" style="font-size: 24px; text-decoration: none; color: #000;" target="_blank"></a>'; ?>
-        <?php echo '<a href="'.$social_account_4.'" class="fa fa-linkedin p-1" style="font-size: 24px; text-decoration: none; color: #000;" target="_blank"></a>'; ?>
+        <?php echo '<a href="'.$social_account_4.'" class="fa fa-twitter p-1" style="font-size: 24px; text-decoration: none; color: #000;" target="_blank"></a>'; ?>
+        <?php echo '<a href="'.$social_account_3.'" class="fa fa-linkedin p-1" style="font-size: 24px; text-decoration: none; color: #000;" target="_blank"></a>'; ?>
       </p>
       <br>
       <hr>
